@@ -176,11 +176,13 @@
 	</table>
 </div>
 
-<img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
 <a href="medical.jsp" style="text-decoration: none;color: #000000;">
+<img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+</a>
 
-<img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
 <a href="goout.jsp" style="text-decoration: none;color: #000000;">
+<img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+</a>
 
 </body>
 </html>
