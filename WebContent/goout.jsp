@@ -18,8 +18,9 @@
 <img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
 </a>
 
+<a href="index.jsp" style="text-decoration: none;color: #000000;">
 <img src=./pic/returnMainBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
-
+</a>
 
 </body>
 </html>
