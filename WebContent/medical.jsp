@@ -15,11 +15,11 @@
 <img src=./pic/search.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:413px; "></img>
 
 <a href="index.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/returnMainBottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+<img src="./pic/returnmainbottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
 </a>
 
 <a href="goout.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/goOutBottom.png" border="0" width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+<img src="./pic/gooutbottom.png" border="0" width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
 </a>
 
 

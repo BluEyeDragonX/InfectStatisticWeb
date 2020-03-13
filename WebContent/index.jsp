@@ -40,8 +40,8 @@
 <body>
 
 <table><tr>
-<td><img src="./pic/nowBottom.png" border="0" width="190" height="51" ; style="position:absolute; left:0px; top:0px; "></td>
-<td><img src="./pic/cumulativeBottom.png" border="0" width="190" height="51" ; style="position:absolute; left:180px; top:0px; "></td>
+<td><img src="./pic/nowbottom.png" border="0" width="190" height="51" ; style="position:absolute; left:0px; top:0px; "></td>
+<td><img src="./pic/cumulativebottom.png" border="0" width="190" height="51" ; style="position:absolute; left:180px; top:0px; "></td>
 </tr></table>
 
 <div id="container" style="height: 305px;width:366px;">
@@ -177,11 +177,11 @@
 </div>
 
 <a href="medical.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/medicalBottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+<img src="./pic/medicalbottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
 </a>
 
 <a href="goout.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/goOutBottom.png" border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+<img src="./pic/gooutbottom.png" border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
 </a>
 
 </body>
