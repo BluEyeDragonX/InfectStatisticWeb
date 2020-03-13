@@ -39,6 +39,11 @@
 
 <body>
 
+<table><tr>
+<td><img src=./pic/nowBottom.png border=0 width="190" height="51" ; style="position:absolute; left:0px; top:0px; "></td>
+<td><img src=./pic/cumulativeBottom.png border=0 width="190" height="51" ; style="position:absolute; left:180px; top:0px; "></td>
+</tr></table>
+
 <div id="container" style="height: 305px;width:366px;">
 
 <script type="text/javascript">
@@ -92,17 +97,17 @@
                         	if(params.value == 0){
                         		return "#FFFFFF"; 
                         	}else if(params.value >0 && params.value <10){                            
-                				return "#FFCCCC";                        
+                				return "#FAEBD2";                        
                 			}else if(params.value >=10 && params.value<100 ){
-                				return "#FFAAAA";                        
+                				return "#E9A188";                        
                 			}else if(params.value >=100 && params.value<500 ){
-                				return "#FF8888";
+                				return "#D56355";
                 			}else if(params.value >=500 && params.value<1000 ){
-                				return "#FF6666";
+                				return "#BB3937";
                 			}else if(params.value >=1000 && params.value<10000 ){
-                				return "#FF4444";
+                				return "#772627";
                 			}else{
-                				return "#FF0000"; 
+                				return "#480f10"; 
                 			}                   
                 		}
                     },
@@ -170,6 +175,11 @@
 		</tr>
 	</table>
 </div>
+
+<table><tr>
+<td><img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></td>
+<td><img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></td>
+</tr></table>
 
 </body>
 </html>
