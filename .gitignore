@@ -14,3 +14,4 @@
 .project
 *.xml
 /.idea/*
+.vs
