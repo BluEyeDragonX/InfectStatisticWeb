@@ -14,9 +14,9 @@
 <img src=./pic/road.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:283px; "></td>
 <img src=./pic/shop.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:413px; "></td>
 
-<td><img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></td>
-<td><img src=./pic/returnMainBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></td>
-</tr></table>
+<img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+<img src=./pic/returnMainBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+
 
 </body>
 </html>

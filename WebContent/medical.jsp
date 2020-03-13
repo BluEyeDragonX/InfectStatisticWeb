@@ -10,16 +10,16 @@
 
 <img src=./pic/medback.png border=0 width="380" height="227" ; style="position:absolute; left:0px; top:0px; "></img>
 
-<img src=./pic/hospital.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:155px; "></td>
-<img src=./pic/report.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:283px; "></td>
-<img src=./pic/search.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:413px; "></td>
+<img src=./pic/hospital.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:155px; "></img>
+<img src=./pic/report.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:283px; "></img>
+<img src=./pic/search.png border=0 width="329" height="115" ; style="position:absolute; left:29px; top:413px; "></img>
 
 
 
-<table><tr>
-<td><img src=./pic/returnMainBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></td>
-<td><img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></td>
-</tr></table>
+
+<img src=./pic/returnMainBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+<img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+
 
 </body>
 </html>
