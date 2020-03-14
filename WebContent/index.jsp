@@ -1,3 +1,7 @@
+<%@page import="province.pojo.Province"%>
+<%@page import="java.util.List"%>
+<%@page import="province.dao.ProvinceDAOImpl"%>
+<%@page import="province.dao.ProvinceDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
@@ -10,7 +14,25 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/echarts.min.js"></script>
 <script src="js/china.js"></script>
+<div>
+	<%	
+		Province[] prov = new Province[34];
+		int cc = 0,ccf = 0,sc = 0,curec = 0,dc = 0;
+		int i = 0;
+		ProvinceDAO provinceDAO = new ProvinceDAOImpl();
+		List<Province> provinces = provinceDAO.list();
+		for(Province province:provinces){
+       		prov[i] = province;
+       		cc += prov[i].getConfirmed();
+       		ccf += prov[i].getCurrentConfirmed();
+       		sc += prov[i].getSuspected();
+       		curec += prov[i].getCured();
+       		dc += prov[i].getDead();
+       		i++;
+       	}
 
+	%>
+</div>
 <style type="text/css">
 	td { text-align:center; }
 	table { width:366px; }
@@ -33,31 +55,115 @@
     	font-weight:500;
     }
     
-}
+	}
 </style>
 </head>
 
 <body>
 
-<table><tr>
-<td><img src="./pic/nowbottom.png" border="0" width="190" height="51" ; style="position:absolute; left:0px; top:0px; "></td>
-<td><img src="./pic/cumulativebottom.png" border="0" width="190" height="51" ; style="position:absolute; left:180px; top:0px; "></td>
-</tr></table>
+<table>
+	<tr>
+		<td>
+			<a href="index.jsp">
+				<img src="./pic/nowbottom.png" border="0" width="190" height="51" ; style="position:absolute; left:0px; top:0px; ">
+			</a>
+		</td>
+		<td>
+			<a href="index.jsp?flag=cumulative">
+				<img src="./pic/cumulativebottom.png" border="0" width="190" height="51" ; style="position:absolute; left:180px; top:0px; "></td>
+			</a>
+		</tr>
+</table>
 
 <div id="container" style="height: 305px;width:366px;">
 
+
+
 <script type="text/javascript">
     // 全国省份列表
-    var dataMap = [{ name: '北京' ,value:15 }, { name: '天津' ,value:18 }, { name: '上海' ,value:15 }, 
-    	{ name: '重庆' ,value:55 }, { name: '河北' ,value:88 }, { name: '河南' ,value:152 }, { name: '云南' ,value:154 }, 
-    	{ name: '辽宁' ,value:1 }, { name: '黑龙江' ,value:57 }, { name: '湖南' ,value:188 }, { name: '安徽' ,value:45 }, 
-    	{ name: '山东' ,value:78 }, { name: '新疆' ,value:44 }, { name: '江苏' ,value:12 }, { name: '浙江' ,value:63 }, 
-    	{ name: '江西' ,value:144}, { name: '湖北' ,value:111}, { name: '广西' ,value:32 }, { name: '甘肃' ,value:21 }, 
-    	{ name: '山西' ,value:0 }, { name: '内蒙古' ,value:2122 }, { name: '陕西' ,value:77 }, { name: '吉林' ,value:24 }, 
-    	{ name: '福建' ,value:551 }, { name: '贵州' ,value:132337 }, { name: '广东' ,value:66 }, { name: '青海' ,value:55 }, 
-    	{ name: '西藏' ,value:4 }, { name: '四川' ,value:33 }, { name: '宁夏' ,value:22 }, { name: '海南' ,value:11 }, 
-    	{ name: '台湾' ,value:10 }, { name: '香港' ,value:17 }, { name: '澳门' ,value:18 }]
     
+    <%	
+    	String flag =request.getParameter("flag");
+    	if(flag!=null && flag.equals("cumulative")) {
+    %>
+    var dataMap = [
+		{ name: '湖北' ,value:<%=prov[0].getCurrentConfirmed()%> },
+		{ name: '北京' ,value:<%=prov[1].getCurrentConfirmed()%>},
+		{ name: '香港' ,value:<%=prov[2].getCurrentConfirmed()%>},
+	 	{ name: '广东' ,value:<%=prov[3].getCurrentConfirmed()%>},
+		{ name: '甘肃' ,value:<%=prov[4].getCurrentConfirmed()%>},
+		{ name: '四川' ,value:<%=prov[5].getCurrentConfirmed()%>},
+		{ name: '台湾' ,value:<%=prov[6].getCurrentConfirmed()%>},
+		{ name: '黑龙江' ,value:<%=prov[7].getCurrentConfirmed()%>},
+		{ name: '上海' ,value:<%=prov[8].getCurrentConfirmed()%>},
+		{ name: '浙江' ,value:<%=prov[9].getCurrentConfirmed()%>},
+		{ name: '山东' ,value:<%=prov[10].getCurrentConfirmed()%>},
+		{ name: '辽宁' ,value:<%=prov[11].getCurrentConfirmed()%>},
+		{ name: '陕西' ,value:<%=prov[12].getCurrentConfirmed()%>},
+		{ name: '湖南' ,value:<%=prov[13].getCurrentConfirmed()%>},
+		{ name: '广西' ,value:<%=prov[14].getCurrentConfirmed()%>},
+		{ name: '重庆' ,value:<%=prov[15].getCurrentConfirmed()%>},
+		{ name: '贵州' ,value:<%=prov[16].getCurrentConfirmed()%>},
+		{ name: '宁夏' ,value:<%=prov[17].getCurrentConfirmed()%>},
+		{ name: '内蒙古' ,value:<%=prov[18].getCurrentConfirmed()%>},
+		{ name: '河南' ,value:<%=prov[19].getCurrentConfirmed()%>},
+		{ name: '河北' ,value:<%=prov[20].getCurrentConfirmed()%>},
+		{ name: '云南' ,value:<%=prov[21].getCurrentConfirmed()%>},
+		{ name: '海南' ,value:<%=prov[22].getCurrentConfirmed()%>},
+		{ name: '江苏' ,value:<%=prov[23].getCurrentConfirmed()%>},
+		{ name: '天津' ,value:<%=prov[24].getCurrentConfirmed()%>},
+		{ name: '吉林' ,value:<%=prov[25].getCurrentConfirmed()%>},
+		{ name: '安徽' ,value:<%=prov[26].getCurrentConfirmed()%>},
+		{ name: '江西' ,value:<%=prov[27].getCurrentConfirmed()%>},
+		{ name: '福建' ,value:<%=prov[28].getCurrentConfirmed()%>},
+		{ name: '山西' ,value:<%=prov[29].getCurrentConfirmed()%>},
+		{ name: '新疆' ,value:<%=prov[30].getCurrentConfirmed()%>},
+		{ name: '青海' ,value:<%=prov[31].getCurrentConfirmed()%>},
+		{ name: '澳门' ,value:<%=prov[32].getCurrentConfirmed()%>},
+		{ name: '西藏' ,value:<%=prov[33].getCurrentConfirmed()%>},]
+    <%
+    	} else {
+    %>
+    var dataMap = [
+		{ name: '湖北' ,value:<%=prov[0].getConfirmed()%> },
+		{ name: '北京' ,value:<%=prov[1].getConfirmed()%>},
+		{ name: '香港' ,value:<%=prov[2].getConfirmed()%>},
+		{ name: '广东' ,value:<%=prov[3].getConfirmed()%>},
+		{ name: '甘肃' ,value:<%=prov[4].getConfirmed()%>},
+		{ name: '四川' ,value:<%=prov[5].getConfirmed()%>},
+	 	{ name: '台湾' ,value:<%=prov[6].getConfirmed()%>},
+	 	{ name: '黑龙江' ,value:<%=prov[7].getConfirmed()%>},
+		{ name: '上海' ,value:<%=prov[8].getConfirmed()%>},
+	   	{ name: '浙江' ,value:<%=prov[9].getConfirmed()%>},
+	  	{ name: '山东' ,value:<%=prov[10].getConfirmed()%>},
+	  	{ name: '辽宁' ,value:<%=prov[11].getConfirmed()%>},
+	  	{ name: '陕西' ,value:<%=prov[12].getConfirmed()%>},
+	  	{ name: '湖南' ,value:<%=prov[13].getConfirmed()%>},
+	  	{ name: '广西' ,value:<%=prov[14].getConfirmed()%>},
+	   	{ name: '重庆' ,value:<%=prov[15].getConfirmed()%>},
+	 	{ name: '贵州' ,value:<%=prov[16].getConfirmed()%>},
+	 	{ name: '宁夏' ,value:<%=prov[17].getConfirmed()%>},
+		{ name: '内蒙古' ,value:<%=prov[18].getConfirmed()%>},
+	 	{ name: '河南' ,value:<%=prov[19].getConfirmed()%>},
+	 	{ name: '河北' ,value:<%=prov[20].getConfirmed()%>},
+		{ name: '云南' ,value:<%=prov[21].getConfirmed()%>},
+	 	{ name: '海南' ,value:<%=prov[22].getConfirmed()%>},
+	   	{ name: '江苏' ,value:<%=prov[23].getConfirmed()%>},
+	  	{ name: '天津' ,value:<%=prov[24].getConfirmed()%>},
+	  	{ name: '吉林' ,value:<%=prov[25].getConfirmed()%>},
+	 	{ name: '安徽' ,value:<%=prov[26].getConfirmed()%>},
+		{ name: '江西' ,value:<%=prov[27].getConfirmed()%>},
+		{ name: '福建' ,value:<%=prov[28].getConfirmed()%>},
+	  	{ name: '山西' ,value:<%=prov[29].getConfirmed()%>},
+		{ name: '新疆' ,value:<%=prov[30].getConfirmed()%>},
+	  	{ name: '青海' ,value:<%=prov[31].getConfirmed()%>},
+	  	{ name: '澳门' ,value:<%=prov[32].getConfirmed()%>},
+	  	{ name: '西藏' ,value:<%=prov[33].getConfirmed()%>},]
+   			
+    <%
+    	}
+    %>
+
     var option = {
         tooltip: {
             formatter: function (params) {
@@ -132,8 +238,9 @@
   		window.location.href = 'area.jsp?province='+params.name;
   	});
     
- 
 </script>
+
+
 </div>
 <div style="height: 20px; width:366px;">
 	<p><b>实时数据:</b></p>
@@ -147,14 +254,14 @@
 			<td><b>现有重症</b></td>
 		</tr>
 		<tr class="td2">
-			<td style="color:#ff5555;">54927</td>
-			<td style="color:#888811;">5206</td>
-			<td style="color:#aaaa33;">11633</td>
+			<td style="color:#ff5555;">52425</td>
+			<td style="color:#888811;">245</td>
+			<td style="color:#aaaa33;">0</td>
 		</tr>
 		<tr class="td3">
-			<td>昨日-1335</td>
-			<td>昨日+1614</td>
-			<td>昨日-231</td>
+			<td>+3757</td>
+			<td>+103</td>
+			<td>0</td>
 		</tr>
 	</table>
 	<table>
@@ -164,25 +271,40 @@
 			<td>累计死亡</td>
 		</tr>
 		<tr class="td2">
-			<td style="color:#2288ff;">75567</td>
-			<td style="color:#22bb88;">18401</td>
-			<td style="color:#990000;">2239</td>
+			<td style="color:#2288ff;">61243</td>
+			<td style="color:#22bb88;">6629</td>
+			<td style="color:#990000;">2189</td>
 		</tr>
 		<tr class="td3">
-			<td>昨日+892</td>
-			<td>昨日+2109</td>
-			<td>昨日+118</td>
+			<td>昨日+4237</td>
+			<td>昨日+207</td>
+			<td>昨日+273</td>
 		</tr>
 	</table>
 </div>
 
+
+<table>
+	<tr>
+		<td>
+			<img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; ">
+		</td>
+		<td>
+			<img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; ">
+		</td>
+	</tr>
+</table>
+<div>
+
 <a href="medical.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/medicalbottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "></img>
+	<img src="./pic/medicalbottom.png" border="0" width="152" height="50" ; style="position:absolute; left:19px; top:530px; "/>
 </a>
 
 <a href="goout.jsp" style="text-decoration: none;color: #000000;">
-<img src="./pic/gooutbottom.png" border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "></img>
+	<img src="./pic/gooutbottom.png" border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; "/>
 </a>
 
+
+</div>
 </body>
 </html>
