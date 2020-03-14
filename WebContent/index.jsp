@@ -283,11 +283,12 @@
 	</table>
 </div>
 
+<img src=./pic/colornum.png border=0 width="380" height="25" ; style="position:absolute; left:0px; top:300px; ">
 
 <table>
 	<tr>
 		<td>
-			<img src=./pic/medicalBottom.png border=0 width="152" height="50" ; style="position:absolute; left:19px; top:530px; ">
+			<img src=./pic/medicalBottom.png border=0 width="380" height="25" ; style="position:absolute; left:0px; top:300px; ">
 		</td>
 		<td>
 			<img src=./pic/goOutBottom.png border=0 width="152" height="50" ; style="position:absolute; left:209px; top:530px; ">
