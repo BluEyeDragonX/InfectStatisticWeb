@@ -5,14 +5,11 @@
 /target/
 *.class
 *.jar
-*.log
-/logs/*
 /target/*
 .gitignore
 .classpath
 .settings*
 .project
-*.xml
 /.idea/*
 .vs
 /build/
